@@ -6,7 +6,9 @@ import (
 	"time"
 )
 
-func unixTimeStampParser(timeStamp string) {
+func unixTimeStampParser() {
+	var timeStamp string
+	fmt.Scan(&timeStamp)
 	numbers, err := strconv.ParseInt(timeStamp, 10, 32)
 	if err != nil {
 		panic("Invalid Timestamp")
@@ -16,5 +18,5 @@ func unixTimeStampParser(timeStamp string) {
 }
 
 func main() {
-	unixTimeStampParser("1703890777")
+	unixTimeStampParser()
 }
